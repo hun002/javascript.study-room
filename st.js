@@ -16,3 +16,41 @@
 // slice(시작점, 끝점): 시작점~끝점(미포함) 까지 배열을 복사해서 리턴
 // splice(시작점,개수): 시작점부터 개수만큼 실제 배열에서 아이템 제거
 // length : 배열 함수는 아니지만 배열의 크기를 리턴해주는 속성
+
+//함수
+
+// 함수 생김새
+
+// function 함수이름 (매개변수) {
+//     내용입력
+//     return 반환
+// }
+
+// 매개변수: 함수에 전달해야되는 내용이 있을때, 이 함수가 실행될때 알아야되는 내용이 있을 때 매개변수를 통해 전달한다
+// return: 반환값, 함수 완료 후, 반환되야하는 값이 있을 때 사용한다
+
+// 예시
+
+// function greet(firstName,lastName){
+//     console.log("hello",firstName,lastName,"Welcome to our website")
+// }
+
+// greet("Noona","Kim")
+// 함수는 반드시 불러야 실행된다
+
+// 함수의 또다른 이름들
+
+// method: 메서드, 함수와 같은 뜻이다
+// 익명함수 Anonymous function : 이름이 없는 함수. function (y) {console.log(y)}. 함수를 변수에 넣어줄때, 일시적으로 쓰이고 말 함수들에 대해선 익명함수로 만들어준다
+// 람다식 함수: => 를 사용하여 함수를 정의하는 경우이다.(이건 곧 배울 예정이다.) let arrowFunc = (y) => { console.log(y); }
+// 콜백함수 : 다른 함수의 매개변수로 전달된 함수.
+
+// 예시
+
+// button.addEventListenr("click",setCount)
+// // 버튼에 클릭 이벤트가 발생했을때 setCount함수를 콜을 한다
+// function setCount() {
+//     count++
+// }
+
+// 콜백은 말그대로 부른다는 뜻이다. 주로 어떤 함수에 매개변수로 들어가 어떤 특정한 조건이 되었을때만 호출이된다 (클릭이벤트나 타이머이벤트 등등)
