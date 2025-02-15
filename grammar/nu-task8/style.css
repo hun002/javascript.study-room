@@ -57,8 +57,15 @@ body{
     height: 40px;
     border-radius: 17px;
     font-size: 18px;
-    border: 1px solid rgb(148, 255, 210);
-    background-color: rgb(148, 255, 210);
+    border: 1px solid rgb(104, 177, 122);
+    background-color: rgb(104, 177, 122);
+}
+
+.main-text2:hover{
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+    border: 1px solid rgb(100, 204, 126);
+    background-color: rgb(100, 204, 126);
 }
 
 
