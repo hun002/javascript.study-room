@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP!DOWN! GAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <main>
+        <audio id="backgroundMusic" src="You’re just a chill guy listening to chill music.mp3" type="audio/mp3" loop></audio>
+        <div class="main-text1">UP!DOWN!</div>
+        <div class="main-text1-1">GAME</div>
+        <div class="main-container">
+            <div id="result-area">결과</div>
+            <div id="chances-area">찬스</div>
+            <input class="input-area" type="number" id="user-input" placeholder="숫자를 입력해주세요" oninput='handleOnInput(this, 3)'/>
+            <div >
+                <button class="main-text2" id="play-button">go</button>
+                <button class="main-text2" id="reset-button">reset</button>
+            </div>
+        </div>
+        <img class="img-position, hover-message" src="./cill_guy-removebg-preview.png"  onmouseover="showMessageBox()" onclick="showMessageBox()" style="height: 400px; position: fixed; right: 0;">
+        <div id="messageBox" class="hidden">
+        <p>chill 하게 Up!Down! 게임 한 판하시겠습니까?</p>
+        <button onclick="confirmClose()">예</button>
+        <button onclick="askAgain()">아니오</button>
+        </div>
+        <div id="askAgainBox" class="hidden">
+        <p>하시겠습니까?</p>
+        <button onclick="closeMessageBox()">예</button>
+        <button onclick="closeAskAgainBox()">예</button>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById("backgroundMusic");
+            audio.play();
+        };
+    </script>
+    <script src="nu-task8.js"></script>
+</body>
+</html>

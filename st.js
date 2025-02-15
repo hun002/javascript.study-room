@@ -54,3 +54,32 @@
 // }
 
 // 콜백은 말그대로 부른다는 뜻이다. 주로 어떤 함수에 매개변수로 들어가 어떤 특정한 조건이 되었을때만 호출이된다 (클릭이벤트나 타이머이벤트 등등)
+
+//Math 함수의 종류
+
+// Math.random(): 0~1사이의값을 반환 (1에 근접한값까지지만 1은미포함이다)
+// Math.floor():소수점 버림이다
+// Math.ceil():소수점 올림이다
+// Math.round():소수점 반올림
+// Math.max():여러개의 값중 제일 큰값반환
+// Math.min():여러개의 값중 제일 작은값 반환
+
+// Element selectors
+
+// 자바스크립트가 HTML을 가져와서 다루기 위해선 원하는 HTML태그를 선택해야하는데, document객체에서 다양하게 선택하는방식을 제공.
+
+// document.getElementById : id로 선택
+// document.getElementsByClassName: class로 선택, 같은class가 여러개 있을 경우엔 모두 다 선택이 되서 배열에 저장된다
+
+// document.querySelector : id, class둘다 선택이 가능하고 좀더 디테일한 선택이 가능하다 참고로 선택가능한 값이 여러개가 있을경우 그중에 첫번째 태그 하나만 반환한다
+
+// let userInput = document.querySelector("#user-input"); // id=user-input을 선택
+// let resultAreaImg = document.querySelector(".main-img");// class=main-img를 선택
+// let menus = document.querySelector("nav a")// nav태그밑에있는 a태그를 선택 
+// document.querySelectorAll: 위에 document.querySelector와 같다 하지만 All에서 알수있듯이 선택된값 모두를 NodeList에 담아 반환한다
+
+//다양한 노드의 속성값
+
+// textContent : 노드의 text값을 반환(글자만)
+// innterText: 노드의 text값을 반환(띄어쓰기 후 글자만) textContent랑 비슷하지만 textContent는 모든 요소를 반환하는 반면 innerText는 사람이 읽을 수 있는 요소만 가져옴 (글자사이에 스페이스가 많다면 textContent 있는 그대로 가져오는 반면 innerText는 스페이스를 한칸만 남기고 가져온다)
+// innerHTML: html 요소를 반환한다(태그까지 그대로)
