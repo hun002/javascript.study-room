@@ -52,6 +52,7 @@ body{
 
 .main-text2 {
     font-family: "Do Hyeon", serif;
+    color: black;
     margin-top: 20px;
     width: 150px;
     height: 40px;
@@ -62,6 +63,7 @@ body{
 }
 
 .main-text2:hover{
+    color: black;
     transition: all 0.2s ease;
     transform: scale(1.1);
     border: 1px solid rgb(100, 204, 126);
