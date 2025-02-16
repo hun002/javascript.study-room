@@ -7,6 +7,7 @@ let chances = 3;
 let gameOver = false;
 let chancesArea = document.getElementById("chances-area");
 let history = [];
+let correctAnswer = document.getElementById('correct-answer');
 
 playButton.addEventListener("click",play);
 resetButton.addEventListener("click",reset);
@@ -16,9 +17,11 @@ userInput.addEventListener("focus", function(){
 
 chancesArea.innerHTML = `남은 기회:${chances}`;
 
+
 function RandomNum(){
     basicNum = Math.floor(Math.random() * 100)+1 ;
     console.log("정답",basicNum);
+    correctAnswer.textContent = `정답:${basicNum}`;
 }
 
 function play() {

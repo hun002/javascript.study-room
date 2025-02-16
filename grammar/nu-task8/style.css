@@ -122,6 +122,12 @@ body{
     .input-area{
         width: 200px;
     }
+
+    .answer-area{
+        position: absolute;
+        top: 30%;
+        left: 47%;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 569px) {
@@ -154,6 +160,12 @@ body{
     #chances-area,#result-area{
         width: 150px;
         margin-left: -43px;
+    }
+
+    .answer-area{
+        position: absolute;
+        top: 31%;
+        left: 47%;
     }
 
 }
