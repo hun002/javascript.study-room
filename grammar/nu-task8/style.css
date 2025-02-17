@@ -164,8 +164,12 @@ body{
 
     .answer-area{
         position: absolute;
-        top: 28rem;
+        top: 30rem;
         left: 47%;
+    }
+
+    .count{
+        width: 100px;
     }
 
 }
