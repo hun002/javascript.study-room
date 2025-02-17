@@ -125,7 +125,7 @@ body{
 
     .answer-area{
         position: absolute;
-        top: 30%;
+        top: 32%;
         left: 47%;
     }
 }
@@ -158,13 +158,13 @@ body{
     }
     
     #chances-area,#result-area{
-        width: 150px;
+        width: 170px;
         margin-left: -43px;
     }
 
     .answer-area{
         position: absolute;
-        top: 31%;
+        top: 28rem;
         left: 47%;
     }
 

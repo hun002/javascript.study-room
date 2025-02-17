@@ -8,6 +8,7 @@ let gameOver = false;
 let chancesArea = document.getElementById("chances-area");
 let history = [];
 let correctAnswer = document.getElementById('correct-answer');
+let historyCount = document.getElementById("history-count");
 
 playButton.addEventListener("click",play);
 resetButton.addEventListener("click",reset);
@@ -41,18 +42,21 @@ function play() {
     chancesArea.textContent = `남은 기회: ${chances}번`;
     console.log(chances);
 
-    if(userValue < basicNum){
+    if(chances <1 && userValue != basicNum){
+            resultArea.textContent ="GameOver";
+            gameOver = true;  
+    }else if(userValue < basicNum){
         resultArea.textContent = "Up!";
     }else if(userValue > basicNum){
         resultArea.textContent = "Down!" ;
-    }else {
+    }else if (userValue == basicNum){
         resultArea.textContent ="정답입니다!";
-        gameOver = true;
     }
+    
 
     history.push(userValue);
     console.log(history);
-
+    historyCount.innerHTML = `내가 입력한 숫자:${history}`;
     if(chances <1){
         gameOver = true;
     }
@@ -67,7 +71,7 @@ function reset(){
     RandomNum();
     gameOver = false;
     playButton.disabled = false;
-    chances = 5;
+    chances = 3;
     resultArea.innerHTML = "결과";
     chancesArea.innerHTML = `남은 기회:${chances}`;
     userValueList = [];
@@ -85,22 +89,22 @@ function handleOnInput(el, maxlength) {
 
 function showMessageBox() {
     document.getElementById('messageBox').classList.remove('hidden');
-  }
+}
   
-  function closeMessageBox() {
+function closeMessageBox() {
     document.getElementById('messageBox').classList.add('hidden');
     document.getElementById('askAgainBox').classList.add('hidden');
-  }
+}
   
-  function confirmClose() {
+function confirmClose() {
     document.getElementById('messageBox').classList.add('hidden');
-  }
+}
   
-  function askAgain() {
+function askAgain() {
     document.getElementById('askAgainBox').classList.remove('hidden');
-  }
+}
   
-  function closeAskAgainBox() {
+function closeAskAgainBox() {
     document.getElementById('askAgainBox').classList.add('hidden');
-  }
+}
   
