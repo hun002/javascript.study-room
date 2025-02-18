@@ -83,3 +83,23 @@
 // textContent : 노드의 text값을 반환(글자만)
 // innterText: 노드의 text값을 반환(띄어쓰기 후 글자만) textContent랑 비슷하지만 textContent는 모든 요소를 반환하는 반면 innerText는 사람이 읽을 수 있는 요소만 가져옴 (글자사이에 스페이스가 많다면 textContent 있는 그대로 가져오는 반면 innerText는 스페이스를 한칸만 남기고 가져온다)
 // innerHTML: html 요소를 반환한다(태그까지 그대로)
+
+//ES6/ 템플릿 리터럴(Template literal)
+
+// 새로운 문자열 표기법. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용한다.
+
+// 기존 ES5에서의 코드
+// function introduce(name,age){
+//     console.log("제 이름은"+name+"이고, 저는"+age+"살 입니다")
+// }
+// ES6에서의 새로운 방법
+// function introduce(name,age){
+//    console.log(`제 이름은${name}이고 ${age}살 입니다`)
+// }
+
+//이제 굳이 + 말고 ``쓰자~
+
+// innerHTML과 textContent의 차이
+
+// innerHTML: Element의 HTML, XML을 읽어오거나, 설정할 수 있습니다. 태그 안에있는 HTML 전체 내용을 들고옴
+// textContent: 해상 노드가 가지고 있는 텍스트 값을 그대로 가져옴.(얘는 그대로 문자열로, 기능은 안가져옴)
