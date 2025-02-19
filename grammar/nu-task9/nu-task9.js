@@ -31,7 +31,7 @@ function render(){
             resultHTML += `<div class="task task-done">
                     <span>${taskList[i].taskContent}</span>
                     <div class="button-box">
-                        <button onclick="toggleComplete('${taskList[i].id}')">
+                        <button class="" onclick="toggleComplete('${taskList[i].id}')">
                         <i class="fa-solid fa-rotate-left return"></i>
                         </button>
                         <button onclick="deleteTask('${taskList[i].id}')">

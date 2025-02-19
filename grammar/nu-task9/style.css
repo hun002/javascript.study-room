@@ -79,3 +79,10 @@ body{
 .return{
     color: rgb(111, 121, 131);
 }
+
+.button-box button:first-child:hover {
+    background-color: rgb(189, 255, 175);
+  }
+  .button-box button:nth-child(2):hover {
+    background-color: rgba(255, 157, 157, 0.747);
+  }
