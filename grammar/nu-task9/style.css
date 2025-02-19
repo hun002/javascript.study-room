@@ -39,5 +39,43 @@ body{
 .task{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.task-done{
+    text-decoration: line-through;
+    background-color: lightgray;
+    transition: all 1s ease;
+}
+
+.task span {
     padding: 1em;
+}
+
+.button-box {
+    display: flex;
+}
+
+.button-box button {
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin: 0;
+    background-color: white;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.check{
+    color: rgb(26, 139, 26);
+}
+
+.trash{
+    color: rgb(214, 44, 44);
+}
+
+.return{
+    color: rgb(111, 121, 131);
 }
