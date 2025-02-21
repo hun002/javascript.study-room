@@ -46,6 +46,7 @@ function addTask(){
         return alert("할일을 입력해주세요.")
     }
     taskList.push(task);
+    taskInput.value = "";
     console.log(taskList);
     render();
 }
