@@ -105,3 +105,23 @@
 // textContent: 해상 노드가 가지고 있는 텍스트 값을 그대로 가져옴.(얘는 그대로 문자열로, 기능은 안가져옴)
 
 //함수서 클릭 할때마다 true, false값이 달라지게(스위치) 하려면? 바꾸고 싶은 값 앞에 !를 붙여주면 누를 때마다 현재 상태의 반대 값을 가져오게됀다.
+
+//ES6 문법
+
+// let person = {name, age, cute}
+// let person = {name:name,age:age,cute:cute}와 같다
+
+
+// let {name, age, cute} =  person
+// let name = person.name   let age = person.age   let cute = person.cute   와 같다 
+
+// let array = [1,2,3]
+// let [a,b,c] = array
+// let a = array[0]   let b = array[1]   let c = array[2]   와 같다 
+
+// let a = [1,2]
+// let b = [3,4]
+// let c = [5,6]
+
+// let result = [...a,...b,...c] // [1,2,3,4,5,6]
+	
