@@ -136,3 +136,15 @@
 // find : 조건에 충족하는 아이템 하나만 반환(여러개라면 첫번째것만 반환)
 // findIndex : 조건에 충족하는 아이템의 인덱스값 반환 (여러개라면 첫번째아이템의 인덱스번호만 반환)
 	
+
+//json 파일 변환 예제(함수를 배열형식으로 해주는 확장자)
+// let response = await fetch(url)
+// let daa = await response.json()
+
+//API 호출 예시
+// const callAPI = async() =>{
+//     let url = new URL(`url주소`)
+//     let header = new Headers({헤더내용}) // 이건 필요한 경우만
+//     let response = await fetch(url,{headers:header})
+//     let data = await response.json()
+// }

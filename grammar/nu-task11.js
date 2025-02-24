@@ -116,10 +116,7 @@ let names = [
 
 // console.log(names.find(item=>item.length>=20))//생략버전
 
-// let midName = names.find((item)=>{
-//     let Upname = item.split(' ');
-//     return Upname[1];
-// })
+// let midName = names.find((item)=>item.replace(/ /g,"").length>=20);
 
 // console.log(midName);
 
