@@ -36,8 +36,9 @@ const render = ()=> {
     const newsHTML = newsList.map(
         (news) => `<div class="row news">
                 <div class="col-lg-4 news-img-area">
-                    <img class="news-img-size" src="${news.urlToImage ? news.urlToImage : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU'}" />
+                    <img class="news-img-size" src="${news.urlToImage}" onerror="this.onerror=null; this.src='https://static.wikia.nocookie.net/high-strangeness/images/a/af/NoInfobox.png/revision/latest/scale-to-width-down/350?cb=20210630001131';" />
                 </div>
+
                 <div class="col-lg-8 news-small-text">
                     <h2 class="news-small-text1">${news.title}</h2>
                     <p>
