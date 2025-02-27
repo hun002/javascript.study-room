@@ -74,7 +74,7 @@ const getNewsByCategory = async (event) => {
 //     }
 // }
 
-// InputBt.addEventListener("click", getNewsByInput); //혼자 해본 방법(실행은 돼지만 뭔가 검색어가 한정적)
+// InputBt.addEventListener("click", getNewsByInput); //혼자 해본 방법(실행은 돼지만 검색어는 한정적)
 
 const getNewsByInput = async () => {
     const inputValue = InputIn.value;
