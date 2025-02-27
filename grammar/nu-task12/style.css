@@ -118,6 +118,13 @@ a{
     text-decoration: underline rgb(22, 24, 48);
 }
 
+.scroll::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+    color: white; 
+}
+
+
 @media (min-width: 1000px) and (max-width: 3000px){
     .news-small-text1{
         padding-top: 10px;
@@ -126,6 +133,9 @@ a{
         display: none;
     }
     .sidenav{
+        display: none;
+    }
+    .scroll::-webkit-scrollbar {
         display: none;
     }
 }
@@ -139,6 +149,11 @@ a{
     }
     .sidenav{
         display: none;
+    }
+    .scroll::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
+        color: white; 
     }
 }
 
@@ -185,5 +200,10 @@ a{
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
+    }
+    .scroll::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
+        color: white; 
     }
 }
