@@ -148,3 +148,20 @@
 //     let response = await fetch(url,{headers:header})
 //     let data = await response.json()
 // }
+
+//try catch//오류 핸들링링
+
+// try{
+//     // 코드를 입력
+// }catch(error){
+//     // 에러핸들
+// }
+
+// try…catch는 오직 런타임 에러에만 동작한다. 즉, 실행가능한 코드에만 try catch가 가능하다 만약에 {}중괄호 짝이 안맞다던지 그런 문법적인 에러로 돌아갈수 없는 코드라면 try catch가 동작할 수 없다.
+
+// 에러 객체 Error
+// try 에서 에러가생기면 catch 블락에 error정보를 error객체안에 넣어서 매개변수로 전달해준다.
+// Error객체를 살펴보면 안에 name, message등 여러 이용가능한 속성값이 있지만 에러를 보기위해선 Error.message만 기억해도 좋다
+
+// Error 객체 설명 관련 링크
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
