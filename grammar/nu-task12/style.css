@@ -124,6 +124,12 @@ a{
     color: white; 
 }
 
+.closebtn{
+    background-color: rgb(22, 24, 48);
+    color: rgba(255, 255, 255, 0.938);
+    border: none;
+}
+
 
 @media (min-width: 1000px) and (max-width: 3000px){
     .news-small-text1{

@@ -5,6 +5,10 @@ let category = '';
 const menus = document.querySelectorAll(".menus button");
 menus.forEach(menu => menu.addEventListener("click", (event) => getNewsByCategory(event)));
 
+const mySideNav = document.querySelectorAll(".sidenav a");
+mySideNav.forEach(sidenav => sidenav.addEventListener("click", (event) => getNewsByCategory(event)));
+console.log("nav", mySideNav);
+
 const InputIn = document.getElementById("myInput");
 const InputBt = document.getElementById("myInput2");
 
@@ -70,7 +74,7 @@ const getNewsByCategory = async (event) => {
 //         const response = await fetch(url);
 //         const data = await response.json();
 //         newsList = data.articles || [];
-//         render();
+//         render();~
 //     }
 // }
 
