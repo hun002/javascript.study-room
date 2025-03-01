@@ -135,6 +135,27 @@ a{
     display: none;
 }
 
+.paginationPS{
+    display: flex;
+    justify-content: center;
+}
+
+.active>.page-link, .page-link.active {
+    z-index: 3;
+    color: white;
+    background-color: #575757;
+    border-color: #575757;
+}
+
+.page-link {
+    color: #575757;
+}
+
+.pagination {
+    --bs-pagination-active-bg: #575757;
+    --bs-pagination-active-border-color:#575757;
+}
+
 
 @media (min-width: 1000px) and (max-width: 3000px){
     .news-small-text1{

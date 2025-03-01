@@ -1,6 +1,14 @@
 const API_KEY = `57129f0ea2cf4bee82db8ac01e8e46fd`;
 let newsList = [];
 let category = '';
+let totalResults = 0;
+let page = 1;
+const pageSize = 10;
+const groupSize = 5;
+
+
+
+
 const alertMs = document.getElementById("alertMss");
 let url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=kr`);
 
@@ -16,14 +24,19 @@ const InputBt = document.getElementById("myInput2");
 
 const getNews = async()=>{
     try{
+        url.searchParams.set("page",page);
+        url.searchParams.set("pageSize",pageSize);
         const response = await fetch(url);
+
         const data = await response.json();
         if(response.status === 200){
             if(data.articles.length===0){
                 throw new Error("검색 결과가 없습니다.");
             }
             newsList = data.articles;
+            totalResults = data.totalResults;
             render();
+            paginationRender();
         }else{
             throw new Error(data.message);
         }
@@ -41,7 +54,7 @@ const getLatestNews = async () => {
     console.log("기사 배열", newsList);
 }
 console.log("myInput2:", InputBt);
-getLatestNews();
+
 
 const render = () => {
     const newsHTML = newsList.map(
@@ -141,3 +154,43 @@ function openInput() {
 }
 
 console.log(moment().format('YYYY-MM-DD HH:mm:ss'));
+
+const paginationRender = ()=>{
+    const totalPages = Math.ceil(totalResults/pageSize);
+    const pageGroup = Math.ceil(page/groupSize);
+    let lastPage = pageGroup * groupSize;
+    const firstPage = lastPage - (groupSize - 1) <= 0 ? 1 : lastPage - (groupSize -1 );
+    let paginationHTML = "";
+    
+    if(lastPage>totalPages){
+        lastPage = totalPages;
+    }
+
+    if(page>1){
+        paginationHTML = `<li class="page-item PeBt" onclick="moveToPage(1)"><a class="page-link" href="#">&lt;&lt;</a></li>
+        <li class="page-item PeBt" onclick="moveToPage(${page -1})"><a class="page-link" href="#">&lt;</a></li>`;
+    }else{
+        paginationHTML += "";
+    }
+
+    for(let i=firstPage; i<=lastPage; i++){
+        paginationHTML += ` <li class="page-item ${i==page?"active":""}" onclick="moveToPage(${i})" ><a class="page-link">${i}</a></li>`
+    }
+
+    if(page<totalPages){
+        paginationHTML += `<li class="page-item nextBt" onclick="moveToPage(${page +1})"><a class="page-link" href="#">&gt;</a></li>
+        <li class="page-item nextBt" onclick="moveToPage(${totalPages})"><a class="page-link" href="#">&gt;&gt;</a></li>`;
+    }else{
+        paginationHTML += "";
+    }
+    
+    
+    document.querySelector(".pagination").innerHTML = paginationHTML;
+}
+
+const moveToPage = (pageNum)=> {
+    page = pageNum;
+    getNews();
+}
+
+getLatestNews();
